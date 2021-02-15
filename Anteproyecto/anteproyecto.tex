@@ -106,98 +106,89 @@
 \section{Introducción}
 \label{sec:introduccion}
 
-\textit{En este apartado se describirá el contexto en el que se desenvolverá el
-  TFG y sus antecedentes si existen. Recuerda que en el anteproyecto
-  también se pueden poner referencias bibliográficas como \cite{moore2002}}.
+Todo sondeo que se publica en los distintos medios suele tener un impacto temporal justo en el momento en el que es publicado, y a la vez es olvidado cuando nuevos sondeos son publicados y finalmente desechados una vez ya han aparecido los resultados finales. Lo que se busca con este proyecto es responder a la pregunta de qué cerca o fiables habían sido esas encuestas o sondeos respecto a lo que finalmente ha sido el resultado final de, por ejemplo, unas votaciones electorales.
+Con esta herramienta se podrá responder a esa pregunta y hacer un seguimiento de las distintas fuentes, y al ser colaborativa, los propios usuario podrán interaccionar y añadir los propios sondeos que quieran comprobar. 
 
 
 \section{Objetivos y desarrollo}
 \label{sec:objetivos-y-campo}
 
-\textit{En este apartado se delimitan y explican con claridad los objetivos
-  generales a conseguir con el TFG y la aplicación del mismo, así como los
-  objetivos específicos en su caso. Algo del tipo:}
-
-El objetivo fundamental de este proyecto es el diseño, implementación y
-evaluación de \ldots
+El objetivo fundamental de este proyecto es el diseño, implementación y evaluación de una herramienta online y colaborativa para el análisis temporal de la fiabilidad de encuestas, sondeos y estimación de indicadores.\\
+La aplicación web deberá ser totalmente adaptable y configurable a cualquier tipo análisis, permitiendo tanto introducir la información de forma manual, así como ser capaz de extraerla de forma automática de distintas fuentes.\\
+Los usuarios podrán cargar sus fuentes de información y todas en conjunto realizar un seguimiento que permita observar la fiabilidad.
 
 Los objetivos específicos de este proyecto son los siguientes:
 
 \begin{itemize}
-\item Realizar un  \ldots
-\item Diseñar, implementar y evaluar  \ldots, siguiendo la arquitectura
-  mostrada en la figura \ref{fig_arquitectura}, y que tendrá las
+\item Realizar un estudio para identificar la forma más optima de ordenar toda la información, de forma que pueda ser totalmente adaptable a todo tipo de sondeo o encuesta.
+\item Diseñar, implementar y evaluar una aplicación web, y que tendrá las
   siguientes características:
 
   \begin{enumerate}
-  \item Característica 1 \ldots
-  \item Característica 2 \ldots
-  \item  \ldots
-  \item Característica n \ldots
+  \item Permitir consultar los datos introducidos y realizar un seguimiento.
+  \item Configurar la información de forma que sea interpretable.
+  \item Introducir datos manualmente.
+  \item Introducir datos en base a documentos de txt, enlaces web, imágenes, etc.
+  \item Permitir configurar distintos tipos de usuarios.
   \end{enumerate}
 
-\item Analizar  \ldots
+\item Analizar la forma más eficiente de desarrollar la aplicación web, teniendo en cuenta la importancia que tendrá la parte visual e interectciva de la misma; así como estudiar de qué forma se ha de guardar y relacionar toda la información que se vaya añadiendo.
 
-\item Documentar  \ldots
+\item Documentar las distintas fases del ciclo de vida del software, que se explican en la sección~\ref{sec:metodologia-y-plan}
 
 \end{itemize}
-
-\begin{figure}[tphb]
-  \centering
-  \includegraphics[width=3in]{Diagrama2.pdf}
-  \caption{Arquitectura del sistema completo.}
-  \label{fig_arquitectura}
-\end{figure}
 
 
 \section{Metodología y plan de trabajo}
 \label{sec:metodologia-y-plan}
-
-\textit{Aquí se incluirá una descripción (puede ser incluso una enumeración)
-  clara de las etapas que se van a seguir, y si es posible se deberá
-  incluir un diagrama de Gantt. Por ejemplo algo del estilo a:}
 
 Estas son las fases de desarrollo que se van a seguir para la
 consecución de los objetivos del proyecto descritos en la sección~\ref{sec:objetivos-y-campo}:
 
 \begin{enumerate}
   
-\item Planificación y análisis (1 mes)
-  
+\item Requisitos (x mes)
   \begin{itemize}
-  \item Formación en \ldots
-  \item Consulta de la API \ldots
-  \item Consulta bibliográfica \ldots
-  \item Profundización en herramientas de soporte \ldots
-  \item  \ldots
+  \item Identificar exactamente qué se desea mostrar y cómo respecto al pensamiento inicial.
+  \item Con esa idea inicial se puede dibujar una idea para diferenciar la separación entre las distintas utilidades que ofrecerá la plataforma.
+  \item Identificar las funcionalidades a las que podrá acceder cada usuario.
+  \item Determinar cuál es la mejor forma para desarrollar la herramienta, si un software de escritorio que envía y recibe información, una aplicación web multiusuario, etc.
   \end{itemize}
 
-\item Análisis del sistema (0,5 meses)
+\item Análisis (x meses)
   \begin{itemize}
   \item Se analizan los plazos y tiempos respecto a la planificación del análisis.
   \item Si no se ajustan al tiempo disponible se deberá modificar o adaptar el diseño a los tiempos.
+  \item Identificar qué patrón de arquitectura se adec\'ua mejor (MVC o MVVM).
+  \item Qué tipo de base de datos es mejor según los datos que van a ser tratados.
+  \item Definir los límites y tipos de los distintos usuarios.
+  \item Definir las funciones de cada parte de la plataforma y cómo se relacionan.
+  \item Definir cómo se van a identificar los distintos sondeos o encuestas a seguir para que sea configurable por cada usuario y empleado por otros para realizar la introducción de información desde distintas fuentes.
   \end{itemize}
 
 
-\item Diseño, implementación y evaluación del  \ldots (2 meses)
+\item Diseño (x meses)
   \begin{itemize}
-  \item Definición del  \ldots
-  \item Implementación del  \ldots
-  \item Evaluación del  \ldots
+  \item Diseño de la arquitectura general de la plataforma
+  \item Diseño particular de las distintas utilidades de la web
+  \item Diseño de la base de datos
   \end{itemize}
   
-\item Implementación y evaluación de  \ldots (1 mes)
-
-\item Diseño, implementación y evaluación del módulo  \ldots (1 mes):
+\item Codificaci\'on e integraci\'on (x mes)
   \begin{itemize}
-  \item Definición de  \ldots
-  \item Definición de  \ldots
-  \item Implementación y evaluación  \ldots
+  \item Se crea la base de datos que se había diseñado y se integra con la aplicación web
+  \item Se programa toda la aplicación web en base al análisis previo
   \end{itemize}
 
-\item Integración y  \ldots (1 mes)
+\item Pruebas (x mes)
+  \begin{itemize}
+  \item Se probará que todos los módudos funcionan correctamente y que todas las funcionalidades estén presentes
+  \end{itemize}
 
-\item Documentación  \ldots (0,5 meses)
+\item Implementaci\'on  (x meses)
+  \begin{itemize}
+  \item En caso de que se publique.
+  \end{itemize}
 
 \end{enumerate}
 
@@ -213,7 +204,7 @@ son las siguientes:
 
 \begin{itemize}
 \item PC compatible
-\item Sensor  \ldots
+\item Entorno de desarrollo compatible con los últimos framworks de .NET  \ldots
 \item Sistema operativo GNU/Linux~\cite{gnulinux}
 \item Entorno de desarrollo Emacs/Vim~\cite{emacs}
 \item Procesador de textos \LaTeX~\cite{lamport94}
