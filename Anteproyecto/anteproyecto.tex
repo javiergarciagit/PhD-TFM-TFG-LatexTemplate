@@ -106,8 +106,10 @@
 \section{Introducción}
 \label{sec:introduccion}
 
-Todo sondeo que se publica en los distintos medios suele tener un impacto temporal justo en el momento en el que es publicado, y a la vez es olvidado cuando nuevos sondeos son publicados y finalmente desechados una vez ya han aparecido los resultados finales. Lo que se busca con este proyecto es responder a la pregunta de qué cerca o fiables habían sido esas encuestas o sondeos respecto a lo que finalmente ha sido el resultado final de, por ejemplo, unas votaciones electorales.
-Con esta herramienta se podrá responder a esa pregunta y hacer un seguimiento de las distintas fuentes, y al ser colaborativa, los propios usuario podrán interaccionar y añadir los propios sondeos que quieran comprobar. 
+Todo sondeo o estimación que se publica en los distintos medios suele tener un impacto y consumo temporal, que suele ir actualizándose con otros sondeos regularmente o tal como se acerca cierto acontecimiento. Por ejemplo, un informe de estimación de crecimiento económico se publica regularmente, mientras que los sondeos electorales terminan cuando se realiza una votación. En ambos casos, son estudios que alimentan a medios de comunicación hasta que tienen nuevos sondeos o ya unos resultados finales.\\
+Lo que busca este proyecto es permitir realizar un estudio y seguimiento que muestra la fiabilidad de esos estudios respecto a unos resultados finales, y de esa forma poder estimar qué fiabilidad han tenido.\\
+Los usuarios podrán colaborar con la herramienta online personalizando sondeos a seguir o analizar, así como consultar toda la información ya disponible y analizada en la herramienta.
+
 
 
 \section{Objetivos y desarrollo}
@@ -147,7 +149,7 @@ consecución de los objetivos del proyecto descritos en la sección~\ref{sec:obj
 
 \begin{enumerate}
   
-\item Requisitos (x mes)
+\item Requisitos (2 semanas)
   \begin{itemize}
   \item Identificar exactamente qué se desea mostrar y cómo respecto al pensamiento inicial.
   \item Con esa idea inicial se puede dibujar una idea para diferenciar la separación entre las distintas utilidades que ofrecerá la plataforma.
@@ -155,7 +157,7 @@ consecución de los objetivos del proyecto descritos en la sección~\ref{sec:obj
   \item Determinar cuál es la mejor forma para desarrollar la herramienta, si un software de escritorio que envía y recibe información, una aplicación web multiusuario, etc.
   \end{itemize}
 
-\item Análisis (x meses)
+\item Análisis (4 semanas)
   \begin{itemize}
   \item Se analizan los plazos y tiempos respecto a la planificación del análisis.
   \item Si no se ajustan al tiempo disponible se deberá modificar o adaptar el diseño a los tiempos.
@@ -164,28 +166,29 @@ consecución de los objetivos del proyecto descritos en la sección~\ref{sec:obj
   \item Definir los límites y tipos de los distintos usuarios.
   \item Definir las funciones de cada parte de la plataforma y cómo se relacionan.
   \item Definir cómo se van a identificar los distintos sondeos o encuestas a seguir para que sea configurable por cada usuario y empleado por otros para realizar la introducción de información desde distintas fuentes.
+ \item Definir cómo actuarán y se relacionarán los distintos módulos para obtener información, ya sea analizando enlaces webs, ficheros de texto, imágenes, etc. Las distintas fuentes han de alimentar la misma base que relacionará los datos.
   \end{itemize}
 
 
-\item Diseño (x meses)
+\item Diseño (3 semanas)
   \begin{itemize}
   \item Diseño de la arquitectura general de la plataforma
   \item Diseño particular de las distintas utilidades de la web
   \item Diseño de la base de datos
   \end{itemize}
   
-\item Codificaci\'on e integraci\'on (x mes)
+\item Codificaci\'on e integraci\'on (5 semanas)
   \begin{itemize}
   \item Se crea la base de datos que se había diseñado y se integra con la aplicación web
   \item Se programa toda la aplicación web en base al análisis previo
   \end{itemize}
 
-\item Pruebas (x mes)
+\item Pruebas (1 semana)
   \begin{itemize}
   \item Se probará que todos los módudos funcionan correctamente y que todas las funcionalidades estén presentes
   \end{itemize}
 
-\item Implementaci\'on  (x meses)
+\item Implementaci\'on  (1 semana)
   \begin{itemize}
   \item En caso de que se publique.
   \end{itemize}
@@ -196,33 +199,17 @@ consecución de los objetivos del proyecto descritos en la sección~\ref{sec:obj
 \section{Medios}
 \label{sec:medios}
 
-\textit{Aquí se describen de los medios necesarios para realizar el TFG. Por
-  ejemplo:}
-
 Las herramientas que van a ser necesarias para desarrollar este proyecto
 son las siguientes:
 
 \begin{itemize}
 \item PC compatible
-\item Entorno de desarrollo compatible con los últimos framworks de .NET  \ldots
-\item Sistema operativo GNU/Linux~\cite{gnulinux}
-\item Entorno de desarrollo Emacs/Vim~\cite{emacs}
+\item Sistema operativo windows~\cite{windows}
+\item Entorno de desarrollo compatible con .NET Core ~\cite{dotnetwhat} ~\cite{dotnet}
 \item Procesador de textos \LaTeX~\cite{lamport94}
-\item Control de versiones CVS~\cite{cvs}
-\item Compilador C/C++ gcc~\cite{gcc}
-\item Gestor de compilaciones make~\cite{make}
-\item Robot con movilidad.
-\item  \ldots
-\end{itemize}
-
-
-
-Otros recursos necesarios para la elaboración del proyecto son:
-
-\begin{itemize}
-\item Herramientas  \ldots
-\item Sistema de desarrollo  \ldots
-\item  \ldots
+\item Software de control de versiones~\cite{git}
+\item Base de datos relacional
+\item Librerías para OCR, scraping, etc dependiendo de las necesidades de las fuentes de información.
 \end{itemize}
 
 
