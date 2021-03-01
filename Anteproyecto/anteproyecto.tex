@@ -107,8 +107,8 @@
 \label{sec:introduccion}
 
 Todo sondeo o estimación que se publica en los distintos medios suele tener un impacto y consumo temporal, que suele ir actualizándose con otros sondeos regularmente o tal como se acerca cierto acontecimiento. Por ejemplo, un informe de estimación de crecimiento económico se publica regularmente, mientras que los sondeos electorales terminan cuando se realiza una votación. En ambos casos, son estudios que alimentan a medios de comunicación hasta que tienen nuevos sondeos o ya unos resultados finales.\\
-Lo que busca este proyecto es permitir realizar un estudio y seguimiento que muestra la fiabilidad de esos estudios respecto a unos resultados finales, y de esa forma poder estimar qué fiabilidad han tenido.\\
-Los usuarios podrán colaborar con la herramienta online personalizando sondeos a seguir o analizar, así como consultar toda la información ya disponible y analizada en la herramienta.
+Lo que busca este proyecto es permitir realizar un estudio y análisis temporal de las predicciones de esos estudios con respecto a unos resultados finales, y de esa forma poder estimar qué fiabilidad han tenido.\\
+Los usuarios podrán colaborar con la herramienta online personalizando sondeos a seguir o analizar, así como alimentar las bases de datos con estimaciones de nuevas fuentes, y, por supuesto, consultar toda la información ya disponible y analizada en la herramienta.
 
 
 
@@ -116,25 +116,26 @@ Los usuarios podrán colaborar con la herramienta online personalizando sondeos 
 \label{sec:objetivos-y-campo}
 
 El objetivo fundamental de este proyecto es el diseño, implementación y evaluación de una herramienta online y colaborativa para el análisis temporal de la fiabilidad de encuestas, sondeos y estimación de indicadores.\\
-La herramienta online deberá ser totalmente adaptable y configurable a cualquier tipo análisis, permitiendo tanto introducir la información de forma manual, así como ser capaz de extraerla de forma automática de distintas fuentes.\\
-Los usuarios podrán cargar sus fuentes de información y todas en conjunto realizar un seguimiento que permita observar la fiabilidad.
+La herramienta online deberá ser totalmente adaptable y configurable a cualquier tipo análisis, permitiendo tanto introducir la información de forma manual, como ser capaz de extraerla de forma automática de distintas fuentes.\\
+Los usuarios podrán cargar sus fuentes de información y todas en conjunto realizar un seguimiento que permita analizar la fiabilidad de las predicciones de los estudios previos considerados.
 
 Los objetivos específicos de este proyecto son los siguientes:
 
 \begin{itemize}
-\item Realizar un estudio para identificar la forma más optima de ordenar toda la información, de forma que pueda ser totalmente adaptable a todo tipo de sondeo o encuesta.
+\item Realizar un estudio para identificar la mejor estrategia de diseño de la estructura de datos de soporte y la lógica de la aplicación, de forma que pueda ser totalmente adaptable a cualquier tipo de sondeo, encuesta o estimación de indicadorers.
 \item Diseñar, implementar y evaluar una aplicación web, que tendrá las
   siguientes características:
 
   \begin{enumerate}
-  \item Permitir consultar los datos introducidos y realizar un seguimiento.
-  \item Configurar la información de forma que sea interpretable.
-  \item Introducir datos manualmente.
-  \item Introducir datos en base a documentos de txt, enlaces web, imágenes, etc.
-  \item Permitir configurar distintos tipos de usuarios.
+  \item Permitir la configuración de la información de forma que sea fácilmente utilizable por la lógica de la aplicación y facilite los procedimientos de interpretación de los datos.
+  \item Permitir la definición versátil de cualquier elemento que vaya a ser analizado, fundamentalmente encuestas y sondeos, así como predicción de indicadores.
+  \item Permitir configurar distintos tipos de usuarios, cada uno con roles bien definidos.
+  \item Permitir la introducir manual de predicciones y resultados  de los elementos considerados.
+  \item Permitir la captura automática de predicciones y resultados de fuentes determinadas, a partir de documentos de texto, enlaces web, imágenes, etc.
+  \item Proporcionar una interfaz web cómoda y potente que permita la consulta de los datos introducidos y la realización de un seguimiento exhaustivo de cada uno de los elementos considerados.
   \end{enumerate}
 
-\item Analizar la forma más eficiente de desarrollar la herramienta online, teniendo en cuenta la importancia que tendrá la parte visual e interectciva de la misma; así como estudiar de qué forma se ha de guardar y relacionar toda la información que se vaya añadiendo.
+\item Analizar la forma más eficiente de desarrollar la herramienta online, teniendo en cuenta la importancia que tendrá la parte visual e interactiva de la misma; así como estudiar de qué forma se ha de guardar y relacionar toda la información que se vaya añadiendo.
 
 \item Documentar las distintas fases del ciclo de vida del software, que se explican en la sección~\ref{sec:metodologia-y-plan}
 
@@ -151,22 +152,22 @@ consecución de los objetivos del proyecto descritos en la sección~\ref{sec:obj
   
 \item Requisitos (2 semanas)
   \begin{itemize}
-  \item Identificar exactamente qué se desea mostrar y cómo respecto al pensamiento inicial.
-  \item Con esa idea inicial se puede dibujar una idea para diferenciar la separación entre las distintas utilidades que ofrecerá la plataforma.
+  \item Identificar exactamente qué se desea mostrar y cómo, con respecto al planteamiento inicial de objetivos.
+  \item A partir del planteamiento inicial, diseñar la estructura de datos y el diagrama de bloques de la lógica de la aplicación para diferenciar la separación entre las distintas utilidades que ofrecerá la plataforma.
   \item Identificar las funcionalidades a las que podrá acceder cada usuario.
-  \item Determinar cuál es la mejor forma para desarrollar la herramienta, si un software de escritorio que envía y recibe información, una aplicación web multiusuario, etc.
+  \item Determinar cuál es la mejor forma para desarrollar la herramienta, si un software de escritorio que envía y recibe información, una aplicación web multiusuario, etc., teniendo en cuenta que se primará el acceso web para todo el proceso de interacción con la plataforma.
   \end{itemize}
 
 \item Análisis (4 semanas)
   \begin{itemize}
-  \item Se analizan los plazos y tiempos respecto a la planificación del análisis.
-  \item Si no se ajustan al tiempo disponible se deberá modificar o adaptar el diseño a los tiempos.
+  \item Evaluar los plazos y tiempos respecto a la planificación del análisis, y adaptarlos al tiempo disponible, modificando o adaptando el diseño previsto.
   \item Identificar qué patrón de arquitectura se adec\'ua mejor (MVC o MVVM).
-  \item Qué tipo de base de datos es mejor según los datos que van a ser tratados.
-  \item Definir los límites y tipos de los distintos usuarios.
-  \item Definir las funciones de cada parte de la plataforma y cómo se relacionan.
+  \item Definir qué tipo de base de datos es la que mejor se ajusta a los datos que van a ser tratados.
+  \item Definir los roles de usuarios y la funcionalidad disponible para cada uno de ellos.
+  \item Definir las funciones de cada módulo de la plataforma y cómo se relacionan entre sí.
   \item Definir cómo se van a identificar los distintos sondeos o encuestas a seguir para que sea configurable por cada usuario y empleado por otros para realizar la introducción de información desde distintas fuentes.
- \item Definir cómo actuarán y se relacionarán los distintos módulos para obtener información, ya sea analizando enlaces webs, ficheros de texto, imágenes, etc. Las distintas fuentes han de alimentar la misma base que relacionará los datos.
+  \item Definir cómo actuarán y se relacionarán los distintos módulos para obtener información, ya sea analizando enlaces web, ficheros de texto, imágenes, etc. Las distintas fuentes han de alimentar la misma base que relacionará los datos.
+  \item Definir el framework a utilizar.
   \end{itemize}
 
 
@@ -179,18 +180,18 @@ consecución de los objetivos del proyecto descritos en la sección~\ref{sec:obj
   
 \item Codificaci\'on e integraci\'on (5 semanas)
   \begin{itemize}
-  \item Se crea la base de datos que se había diseñado y se integra con la aplicación web
-  \item Se programa toda la aplicación web en base al análisis previo
+  \item Crea la estructura de la base de datos diseñada y que se integrará con la aplicación web
+  \item Implementar toda la aplicación web en base al análisis previo
   \end{itemize}
 
 \item Pruebas (1 semana)
   \begin{itemize}
-  \item Se probará que todos los módudos funcionan correctamente y que todas las funcionalidades estén presentes
+  \item Se probará que todos los módulos funcionan correctamente y que todas las funcionalidades estén presentes
   \end{itemize}
 
-\item Implementaci\'on  (1 semana)
+\item Despliegue  (1 semana)
   \begin{itemize}
-  \item En caso de que se publique.
+  \item Para permitir pruebas finales en un entorno real.
   \end{itemize}
 
 \end{enumerate}
@@ -209,7 +210,7 @@ son las siguientes:
 \item Procesador de textos \LaTeX~\cite{lamport94}
 \item Software de control de versiones~\cite{git}
 \item Base de datos relacional
-\item Librerías para OCR, scraping, etc dependiendo de las necesidades de las fuentes de información.
+\item Librerías para OCR, scraping, etc. dependiendo de las necesidades de las fuentes de información.
 \end{itemize}
 
 
